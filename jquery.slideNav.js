@@ -27,6 +27,7 @@
       if (this.options.hasSubNavs) {
         this.findSubNavs(this.element);
         this.bindFoldOutArrows(this.element);
+        this.openParentNavs(this.element);
       }
 
       if ($(this.options.toggleButtonSelector).length) {
@@ -46,6 +47,14 @@
         }
       });
     },
+
+    openParentNavs: function(el) {
+      $(el).find('a.current').each(function(){
+        $(this).parents('.has-sub-nav').addClass('show-sub-nav');
+        $(this).parent('.has-sub-nav').removeClass('show-sub-nav');
+      });
+    },
+
 
     bindFoldOutArrows: function(el) {
       $(el).find('.' + foldOutButtonClass).on('click', function(e){
