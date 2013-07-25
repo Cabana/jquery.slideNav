@@ -21,7 +21,7 @@ Menu markup:
       </ul>
     </li>
 
-    <li class="show-sub-nav">
+    <li>
       <a href="#" class="current">Bliv medlem</a>
       <ul>
         <li><a href="#">Mega mikkel</a></li>
